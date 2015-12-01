@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<head>
+  <title>Knockout Combobox</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.11.3.js"></script>
+  <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script src="js/autocomplete.js"></script>
+  <script src="js/index.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.11.4/themes/black-tie/jquery-ui.css"
+</head>
+<body>
+  <input class="combo-input" data-bind="combobox: settings,
+    comboOptions: options,
+    comboValue: selected,
+    comboOptionsText: optionsText,
+    attr: {id: id}" placeholder="search..." />
+  <button class="combo-button" data-bind="combodropdown: id" 
+    style="margin-left: -5px;">v</button>
+    
+  <div data-bind="with: selected">
+    You've selected <span data-bind="text: id"></span>
+  </div>
+</body>
